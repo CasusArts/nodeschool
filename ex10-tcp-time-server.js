@@ -1,7 +1,7 @@
 /*
   HOWTO:
-  $: node ex10-tcp-time-server.js 1234 (or enter another port number)
-  $ curl http://localhost:1234 (or another port number you entered)
+  (1st Terminal) $: node ex10-tcp-time-server.js 1234 (or enter another port number)
+  (2nd Terminal) $: curl http://localhost:1234 (or another port number you entered)
 */
 const net = require('net');
 const port = process.argv[2];
