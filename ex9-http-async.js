@@ -1,6 +1,8 @@
 // TODO: Use Promises instead of callback hell!
 
-const http = require('http');
+// HOWTO: node ex9-http-async.js api2 api2 api3
+
+const https = require('https');
 const after = require('after');
 
 const url1 = process.argv[2];
@@ -14,7 +16,7 @@ let data3 = [];
 
 
 function callData(url, callback) {
-  http.get(url, (res) => {
+  https.get(url, (res) => {
     let rawData = '';
     res.on('data', (chunk) => {
       rawData += chunk;
